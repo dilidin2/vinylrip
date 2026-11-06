@@ -1,0 +1,14 @@
+# Binary compilato
+vinylrip
+*.exe
+*.test
+*.out
+
+# Musica scaricata (mai da committare)
+Music/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
