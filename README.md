@@ -20,13 +20,20 @@ perfectly fine from a terminal too.
 
 ## Install
 
-Dependencies (openSUSE):
+Runtime dependencies (needed by `vinylrip` itself) — openSUSE:
 
 ```bash
 sudo zypper install yt-dlp ffmpeg
 # optional: deno — yt-dlp 2026+ recommends a JS runtime for full format access.
 # Audio-only downloads usually work without it.
 sudo zypper install deno
+```
+
+Build toolchain (only needed to compile, **not** at runtime). Go is versioned
+in openSUSE — install the latest, e.g.:
+
+```bash
+sudo zypper install go1.27
 ```
 
 Build:
