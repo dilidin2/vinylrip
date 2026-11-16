@@ -117,6 +117,12 @@ func main() {
 		fmt.Fprintln(os.Stderr, "  sudo zypper install deno   (optional — audio-only downloads usually work without it)")
 	}
 
+	// Soft check: yt-dlp's metadata postprocessing needs the Python 'mutagen' module.
+	if _, err := exec.Command("python3", "-c", "import mutagen").Output(); err != nil {
+		fmt.Fprintln(os.Stderr, "Note: Python module 'mutagen' not found — yt-dlp metadata postprocessing will fail.")
+		fmt.Fprintln(os.Stderr, "  sudo zypper install python313-mutagen   (find the version-specific name with: zypper search mutagen)")
+	}
+
 	// Build the yt-dlp command.
 	format := o.format
 	if format == "" {
