@@ -58,7 +58,7 @@ vinylrip <url> -p <folder>     Save to <folder> this one time only
 | Flag | Description |
 |---|---|
 | `-p, --path <folder>` | One-off destination (does **not** change the config) |
-| `-f, --format <fmt>` | `mp3` (default) · `m4a` · `opus` |
+| `-f, --format <fmt>` | `opus` (default) · `mp3` · `m4a` |
 | `-q, --quality <0-9>` | Audio quality, `0` = best (default) |
 | `--no-embed` | Skip cover art & ID3 metadata embedding |
 | `-i, --info` | Print info only, no download |
@@ -95,7 +95,7 @@ Stored at `~/.config/vinyl/config.json`:
 For each URL, `vinylrip` builds a `yt-dlp` command:
 
 ```
-yt-dlp -x --audio-format mp3 --audio-quality 0 \
+yt-dlp -x --audio-format opus --audio-quality 0 \
        --embed-thumbnail --convert-thumbnail jpg --add-metadata \
        -o "<dir>/%(title)s.%(ext)s" "<url>"
 ```

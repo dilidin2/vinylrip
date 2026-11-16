@@ -19,7 +19,7 @@ const (
 	appName   = "vinylrip"
 	cfgDir    = ".config/vinyl"
 	cfgFile   = "config.json"
-	defFormat = "mp3"
+	defFormat = "opus"
 	defQual   = "0"
 )
 
@@ -263,7 +263,7 @@ func printHelp() {
 	fmt.Println()
 	fmt.Println("Flags:")
 	fmt.Println("  -p, --path <folder>    One-off destination (does not change config)")
-	fmt.Println("  -f, --format <fmt>     mp3 (default) | m4a | opus")
+	fmt.Println("  -f, --format <fmt>     opus (default) | mp3 | m4a")
 	fmt.Println("  -q, --quality <0-9>    Audio quality, 0 = best (default 0)")
 	fmt.Println("  --no-embed             Skip cover art & ID3 metadata embedding")
 	fmt.Println("  -i, --info             Print info only, no download")
